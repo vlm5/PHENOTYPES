@@ -1,0 +1,16 @@
+---
+title: "HeartShare EHR Integration Manual"
+author: "HeartShare Data Portal and EHR Integration Working Group"
+date: "2022-11-06"
+site: bookdown::bookdown_site
+documentclass: book
+classoption:
+  - openany
+geometry: margin=1in
+description: "Documentation of EHR data integration specifications"
+---
+
+# About this Document {-}
+
+This document is intended to be the current documentation of specifications pertinent to clinical data integration across the HeartShare study. 
+

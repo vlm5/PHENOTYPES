@@ -1,0 +1,4 @@
+bookdown::gitbook:
+  config:
+    sharing: false
+bookdown::pdf_book: default
