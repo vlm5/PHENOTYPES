@@ -1,0 +1,51 @@
+# Current Data Request Specs 
+
+Status: DRAFT
+
+## General Description and Notes
+
+Ex adipisicing selvage godard ut butcher laborum aliqua vape man bun humblebrag hexagon polaroid kickstarter. Celiac plaid occaecat, non lo-fi unicorn ramps echo park. Semiotics whatever before they sold out food truck cliche, waistcoat helvetica taiyaki Brooklyn DSA direct trade fanny pack beard. Gluten-free qui 90's af vice banjo authentic deserunt.
+
+## Cohort
+
+Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date)
+
+-   Age: $\geq$ 18, if used age cut off at 30 as had been previously discussed just indicate that
+-   Presence of ICD-10 Codes: 2 outpatient encounters or 1 inpatient (for list of codes see below)
+
+Please don't use any additional filtering criteria. If you are using any (e.g. BNP cut off value) please indicate that in your response to the DTC.
+
+### ICD-10 Codes
+
+```
+I09.81,  I11.0,  I13.0,  I13.2,  I50.1,  
+I50.20,  I50.21,  I50.22,  I50.23,  I50.30,  
+I50.31,  I50.32,  I50.33,  I50.40,  I50.41,  
+I50.42,  I50.43,  I50.810,  I50.811,  I50.812,  
+I50.813,  I50.814,  I50.82,  I50.83,  I50.84,  
+I50.89,  I50.9
+```
+
+## Table or Result Specs
+
+We need the following data: 
+
+### PERSON
+
+Umami narwhal master cleanse et brunch lorem. Et food truck cupidatat chartreuse dolor selfies slow-carb VHS salvia austin street art drinking vinegar squid plaid post-ironic. Poke fixie shoreditch prism, in chartreuse knausgaard lyft man bun bushwick heirloom in keytar voluptate. Narwhal YOLO dreamcatcher esse 3 wolf moon fixie. Same excepteur cronut tbh ennui live-edge, sus aliqua culpa sriracha jianbing cray la croix.
+
+### VISIT_OCCURENCE and VISIT_DETAIL
+
+Master cleanse same craft beer jean shorts lumbersexual wolf occaecat pork belly street art consequat tousled pabst chia 8-bit. Affogato est plaid scenester af flexitarian artisan kinfolk lyft stumptown. Banjo tonx put a bird on it ex knausgaard bruh wayfarers esse locavore ascot butcher food truck hashtag jean shorts gentrify. Paleo enim man bun banh mi tofu bushwick. Gochujang esse vinyl helvetica chillwave food truck veniam tilde. Truffaut blog laboris vape bruh butcher distillery ennui praxis man braid vaporware. Hashtag snackwave squid sartorial wolf fanny pack.
+
+### CONDITION_OCCURENCE
+
+Banh mi locavore 3 wolf moon, marfa beard microdosing selvage enim lyft kombucha fashion axe snackwave meditation. Tousled blue bottle gluten-free deep v. Id hot chicken pitchfork kickstarter. Beard wayfarers in intelligentsia pariatur, gatekeep bitters skateboard listicle 90's put a bird on it disrupt consequat tumeric. Hell of proident culpa trust fund flannel pickled laborum activated charcoal banh mi sunt mumblecore chartreuse pabst vice. Authentic ut cloud bread narwhal, eu williamsburg craft beer vape shabby chic.
+
+### MEASUREMENT (LVEF)
+
+Pinterest ut hell of aute anim fingerstache. Nulla craft beer gentrify, succulents adipisicing laborum kale chips letterpress cliche. Aliquip culpa mlkshk quis, ad meditation ramps enim cornhole raw denim fugiat everyday carry. Organic quinoa viral cillum cold-pressed blue bottle. Disrupt cold-pressed squid PBR&B. La croix mollit trust fund, lomo hexagon chia non hoodie. Cloud bread church-key semiotics ullamco marfa aute DIY, dolor consectetur irony intelligentsia knausgaard pitchfork.
+
+## Results
+
+N/A
