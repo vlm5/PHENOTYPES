@@ -1,12 +1,12 @@
-# The Data Portal and EHR Integration Working Group {#dpehri}
+# The Data Portal and EHR Integration Working Group {#dpehri .unnumbered}
 
-## Mandate {#dpehri_mandate}
+## Mandate {#dpehri_mandate .unnumbered}
 
 The EHR integration and Data Portal WG will be the forum for design and implementation of data models, workflows, and interrelated platforms for integrating the diverse datasets and data resources applicable to HeartShare.
 
 Working closely with informatics and data science professionals across the consortium, the EHRI and DP WG will ensure that the processes for acquiring and integrating data -- including extant cohorts, EHR, and imaging data -- are sound, secure, effective, and adherent with the research protocols of HeartShare.
 
-## EHR Integration Purpose {#dpehri_aim}
+## EHR Integration Purpose {#dpehri_aim .unnumbered}
 
 The goal is to functionally integrate clinical care data for HF patients and their comparator group from the HeartShare Clinical Centers (CCs). These data sets are not intended for discovery of novel HFpEF phenotypes. Rather they will be used to:
 
