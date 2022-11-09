@@ -1,12 +1,16 @@
-# [2022-09-29] In-Person HeartShare AMP
+# (PART\*) Previous Data Calls {-}
+
+<!-- In the following sections, we will archive previous data requests. -->
+
+# [2022-09-29] In-Person HeartShare AMP {-}
 
 Status: Completed
 
-## General Description and Notes
+## General Description and Notes {-}
 
 During the in-person meeting on September 29, 2022, we hoped to convey the potential size of the pool of HF participants across HeartShare Clinical Centers.
 
-## Cohort
+## Cohort {-}
 
 please query your site's EHR data to collect numbers and basic information about your site's total HFpatients whose data and images can be queried from the EHR.
 
@@ -17,7 +21,7 @@ Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in t
 -   No additional filtering criteria, if you are using any (e.g. BNP cut off value) please indicate that in your response
 -   DON'T FILTER BASED ON EF, please tabulate instead
 
-### ICD-10 Codes
+### ICD-10 Codes {-}
 
 ```
 I09.81,  I11.0,  I13.0,  I13.2,  I50.1,  
@@ -28,7 +32,7 @@ I50.813,  I50.814,  I50.82,  I50.83,  I50.84,
 I50.89,  I50.9
 ```
 
-## Table or Result Specs
+## Table or Result Specs {-}
 
 We need the following data (age, sex, and race/ethnicity are most important, but EF would be great, especially to categorize into the types of HF [HFpEF, HFmrEF, HFrEF]). If you can, please document the source of the LVEF (from Echo? NLP extraction from notes?) :
 
@@ -38,7 +42,7 @@ We need the following data (age, sex, and race/ethnicity are most important, but
 -   LVEF (most recent LVEF): median, IQR, mean, SD, range.
 -   Sub-Tabulate based on LVEF group into four categories, N (%): HFrEF (EF \< 40%), HFmrEF (EF 40-49%), HFpEF (EF $\geq$ 50%), or patients for whom discrete LVEF Not Available.
 
-## Results
+## Results {-}
 
 ```{r, echo=FALSE}
 knitr::include_graphics("images/heartshareamp_ehr_table.png")

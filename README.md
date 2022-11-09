@@ -1,7 +1,10 @@
-# HeartShare Deep Phenotyping Study Eligibility Criteria
+# HeartShare EHR Integration Manual
 
-Darft Basic Phenotype for recruitment working draft ([word file](BasicPhenotype4Recruitment.docx) | [markdown](BasicPhenotype4Recruitment.md)). 
+This repository is for the collaborative editing and sharing of EHR data exchange specifications for the HeartShare program.
 
-*Draft date: 2022-07-18*
+You can review the current build of the specifications document on this repository's website.
 
-Please note, currently this does not include the control arm.
+[](https://HeartShareStudy.github.io/PHENOTYPES/)
+
+*Draft date: 2022-11-06*
+
