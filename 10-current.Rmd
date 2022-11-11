@@ -1,10 +1,10 @@
-# Current Data Request Specs 
+# Active EHR Data Call 
 
 Status: DRAFT
 
 ## General Description and Notes
 
-Ex adipisicing selvage godard ut butcher laborum aliqua vape man bun humblebrag hexagon polaroid kickstarter. Celiac plaid occaecat, non lo-fi unicorn ramps echo park. Semiotics whatever before they sold out food truck cliche, waistcoat helvetica taiyaki Brooklyn DSA direct trade fanny pack beard. Gluten-free qui 90's af vice banjo authentic deserunt.
+This is the first data call requesting the creation of OMOP CDM compatible table at the HeartShare Clinical Centers. It builds upon the  [initial heart data call](#heartshareamp2022) presented during the in-person HeartShare AMP meeting on September 29, 2022, and extends it to familiarize the HeartShare CCs with the OMOP CDM data table generation workflow.
 
 ## Cohort
 
@@ -46,6 +46,3 @@ Banh mi locavore 3 wolf moon, marfa beard microdosing selvage enim lyft kombucha
 
 Pinterest ut hell of aute anim fingerstache. Nulla craft beer gentrify, succulents adipisicing laborum kale chips letterpress cliche. Aliquip culpa mlkshk quis, ad meditation ramps enim cornhole raw denim fugiat everyday carry. Organic quinoa viral cillum cold-pressed blue bottle. Disrupt cold-pressed squid PBR&B. La croix mollit trust fund, lomo hexagon chia non hoodie. Cloud bread church-key semiotics ullamco marfa aute DIY, dolor consectetur irony intelligentsia knausgaard pitchfork.
 
-## Results
-
-N/A
