@@ -2,7 +2,7 @@
 
 <!-- In the following sections, we will archive previous data requests. -->
 
-# [2022-09-29] In-Person HeartShare AMP {-}
+# In-Person HeartShare AMP [2022-09-29] {#heartshareamp2022 .unnumbered}
 
 Status: Completed
 
@@ -12,7 +12,7 @@ During the in-person meeting on September 29, 2022, we hoped to convey the poten
 
 ## Cohort {-}
 
-please query your site's EHR data to collect numbers and basic information about your site's total HFpatients whose data and images can be queried from the EHR.
+please query your site's EHR data to collect numbers and basic information about your site's total HF patients whose data and images can be queried from the EHR.
 
 Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date)
 
