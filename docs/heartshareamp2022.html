@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>HeartShare EHR Integration Manual</title>
+  <title>In-Person HeartShare AMP [2022-09-29] | HeartShare EHR Integration Manual</title>
   <meta name="description" content="Documentation of EHR data integration specifications" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="HeartShare EHR Integration Manual" />
+  <meta property="og:title" content="In-Person HeartShare AMP [2022-09-29] | HeartShare EHR Integration Manual" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Documentation of EHR data integration specifications" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="HeartShare EHR Integration Manual" />
+  <meta name="twitter:title" content="In-Person HeartShare AMP [2022-09-29] | HeartShare EHR Integration Manual" />
   
   <meta name="twitter:description" content="Documentation of EHR data integration specifications" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="active-ehr-data-call.html"/>
 
-<link rel="next" href="dpehri.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -129,23 +129,57 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">HeartShare EHR Integration Manual</h1>
-<p class="author"><em>HeartShare Data Portal and EHR Integration Working Group</em></p>
-<p class="date"><em>2022-11-06</em></p>
+<div id="heartshareamp2022" class="section level1 unnumbered hasAnchor">
+<h1>In-Person HeartShare AMP [2022-09-29]<a href="heartshareamp2022.html#heartshareamp2022" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Status: Completed</p>
+<div id="general-description-and-notes-1" class="section level2 unnumbered hasAnchor">
+<h2>General Description and Notes<a href="heartshareamp2022.html#general-description-and-notes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>During the in-person meeting on September 29, 2022, we hoped to convey the potential size of the pool of HF participants across HeartShare Clinical Centers.</p>
 </div>
-<div id="about-this-document" class="section level1 unnumbered hasAnchor">
-<h1>About this Document<a href="index.html#about-this-document" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>This document is intended to be the current documentation of specifications pertinent to clinical data integration across the HeartShare study.</p>
+<div id="cohort-1" class="section level2 unnumbered hasAnchor">
+<h2>Cohort<a href="heartshareamp2022.html#cohort-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>please query your site’s EHR data to collect numbers and basic information about your site’s total HF patients whose data and images can be queried from the EHR.</p>
+<p>Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date)</p>
+<ul>
+<li>Age: <span class="math inline">\(\geq\)</span> 18, if used age cut off at 30 as had been previously discussed just indicate that</li>
+<li>Presence of ICD-10 Codes: 2 outpatient encounters or 1 inpatient (for list of codes see below)</li>
+<li>No additional filtering criteria, if you are using any (e.g. BNP cut off value) please indicate that in your response</li>
+<li>DON’T FILTER BASED ON EF, please tabulate instead</li>
+</ul>
+<div id="icd-10-codes-1" class="section level3 unnumbered hasAnchor">
+<h3>ICD-10 Codes<a href="heartshareamp2022.html#icd-10-codes-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>I09.81,  I11.0,  I13.0,  I13.2,  I50.1,  
+I50.20,  I50.21,  I50.22,  I50.23,  I50.30,  
+I50.31,  I50.32,  I50.33,  I50.40,  I50.41,  
+I50.42,  I50.43,  I50.810,  I50.811,  I50.812,  
+I50.813,  I50.814,  I50.82,  I50.83,  I50.84,  
+I50.89,  I50.9</code></pre>
+</div>
+</div>
+<div id="table-or-result-specs-1" class="section level2 unnumbered hasAnchor">
+<h2>Table or Result Specs<a href="heartshareamp2022.html#table-or-result-specs-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We need the following data (age, sex, and race/ethnicity are most important, but EF would be great, especially to categorize into the types of HF [HFpEF, HFmrEF, HFrEF]). If you can, please document the source of the LVEF (from Echo? NLP extraction from notes?) :</p>
+<ul>
+<li>Age: median, IQR, mean, SD, range</li>
+<li>Sex: N (%)</li>
+<li>Race/ethnicity: N (%)</li>
+<li>LVEF (most recent LVEF): median, IQR, mean, SD, range.</li>
+<li>Sub-Tabulate based on LVEF group into four categories, N (%): HFrEF (EF &lt; 40%), HFmrEF (EF 40-49%), HFpEF (EF <span class="math inline">\(\geq\)</span> 50%), or patients for whom discrete LVEF Not Available.</li>
+</ul>
+</div>
+<div id="results" class="section level2 unnumbered hasAnchor">
+<h2>Results<a href="heartshareamp2022.html#results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/heartshareamp_ehr_table.png" /><!-- --></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="active-ehr-data-call.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="dpehri.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
