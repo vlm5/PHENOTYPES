@@ -1,6 +1,6 @@
 # Active EHR Data Call 
 
-Status: DRAFT
+Status: **DRAFT**
 
 ## General Description and Notes
 
@@ -43,39 +43,49 @@ For the included cohorts this data call shall include the following tables:
 ### PERSON
 
 OMOP Definitions: 
-[](https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON)
 
-All of Us Research Program Notes: 
-[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365502-Person)
+[https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON](https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON)
+
+*All of Us* Research Program Notes: 
+
+[https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365502-Person](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365502-Person)
 
 ### VISIT_OCCURENCE and VISIT_DETAIL
 
-VISIT_DETAIL is an optional table used to represents details of each record in the parent VISIT_OCCURRENCE table
+`VISIT_DETAIL` is an optional table used to represents details of each record in the parent `VISIT_OCCURRENCE` table
 
 OMOP Definitions: 
-[](https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_OCCURRENCE)
-[](https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_DETAIL)
 
-All of Us Research Program Notes: 
-[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365522-Visit-occurrence)
-[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/4405827156371-Visit-detail)
+[https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_OCCURRENCE](https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_OCCURRENCE)
+
+[https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_DETAIL](https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_DETAIL)
+
+*All of Us* Research Program Notes: 
+
+[https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365522-Visit-occurrence](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365522-Visit-occurrence)
+
+[https://aou-ehr-ops.zendesk.com/hc/en-us/articles/4405827156371-Visit-detail](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/4405827156371-Visit-detail)
 
 
 ### CONDITION_OCCURENCE
 
 OMOP Definitions: 
-[](https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE)
 
-All of Us Research Program Notes: 
-[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012797982-Condition-occurrence)
+[https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE](https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE)
 
-### MEASUREMENT (LVEF)
+*All of Us* Research Program Notes: 
+
+[https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012797982-Condition-occurrence](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012797982-Condition-occurrence)
+
+### MEASUREMENT (LVEF ONLY)
 
 NOTE: ONLY THE LABS CORRESPONDING TO LVEF
 
 OMOP Definitions: 
-[](https://ohdsi.github.io/CommonDataModel/cdm53.html#MEASUREMENT)
 
-All of Us Research Program Notes: 
-[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012461201-Measurement)
+[https://ohdsi.github.io/CommonDataModel/cdm53.html#MEASUREMENT](https://ohdsi.github.io/CommonDataModel/cdm53.html#MEASUREMENT)
+
+*All of Us* Research Program Notes: 
+
+[https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012461201-Measurement](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012461201-Measurement)
 
