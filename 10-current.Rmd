@@ -8,6 +8,12 @@ This is the first data call requesting the creation of OMOP CDM compatible table
 
 ## Cohort
 
+As currently proposed, there will be two HF failure cohorts for inclusion in the OMOP tables. This does not include, yet, their comparator groups as the cohort definition criteria for them is still being developed.
+
+### Historical HF Patients at CC
+
+#### Selection criteria
+
 Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date)
 
 -   Age: $\geq$ 18, if used age cut off at 30 as had been previously discussed just indicate that
@@ -15,7 +21,7 @@ Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in t
 
 Please don't use any additional filtering criteria. If you are using any (e.g. BNP cut off value) please indicate that in your response to the DTC.
 
-### ICD-10 Codes
+#### ICD-10 Codes
 
 ```
 I09.81,  I11.0,  I13.0,  I13.2,  I50.1,  
@@ -26,23 +32,50 @@ I50.813,  I50.814,  I50.82,  I50.83,  I50.84,
 I50.89,  I50.9
 ```
 
+### HF Patients Prospectively Enrolled in the HeartShare Study
+
+Patients in the HF arms of the HeartShare Study, both the HeartShare HF Registry and the HFpEF Deep Phenotyping Cohorts, are also to be included as they enroll in the study and provide informed consent and EHR authorization via the Eureka app.
+
 ## Table or Result Specs
 
-We need the following data: 
+For the included cohorts this data call shall include the following tables: 
 
 ### PERSON
 
-Umami narwhal master cleanse et brunch lorem. Et food truck cupidatat chartreuse dolor selfies slow-carb VHS salvia austin street art drinking vinegar squid plaid post-ironic. Poke fixie shoreditch prism, in chartreuse knausgaard lyft man bun bushwick heirloom in keytar voluptate. Narwhal YOLO dreamcatcher esse 3 wolf moon fixie. Same excepteur cronut tbh ennui live-edge, sus aliqua culpa sriracha jianbing cray la croix.
+OMOP Definitions: 
+[](https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON)
+
+All of Us Research Program Notes: 
+[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365502-Person)
 
 ### VISIT_OCCURENCE and VISIT_DETAIL
 
-Master cleanse same craft beer jean shorts lumbersexual wolf occaecat pork belly street art consequat tousled pabst chia 8-bit. Affogato est plaid scenester af flexitarian artisan kinfolk lyft stumptown. Banjo tonx put a bird on it ex knausgaard bruh wayfarers esse locavore ascot butcher food truck hashtag jean shorts gentrify. Paleo enim man bun banh mi tofu bushwick. Gochujang esse vinyl helvetica chillwave food truck veniam tilde. Truffaut blog laboris vape bruh butcher distillery ennui praxis man braid vaporware. Hashtag snackwave squid sartorial wolf fanny pack.
+VISIT_DETAIL is an optional table used to represents details of each record in the parent VISIT_OCCURRENCE table
+
+OMOP Definitions: 
+[](https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_OCCURRENCE)
+[](https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_DETAIL)
+
+All of Us Research Program Notes: 
+[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365522-Visit-occurrence)
+[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/4405827156371-Visit-detail)
+
 
 ### CONDITION_OCCURENCE
 
-Banh mi locavore 3 wolf moon, marfa beard microdosing selvage enim lyft kombucha fashion axe snackwave meditation. Tousled blue bottle gluten-free deep v. Id hot chicken pitchfork kickstarter. Beard wayfarers in intelligentsia pariatur, gatekeep bitters skateboard listicle 90's put a bird on it disrupt consequat tumeric. Hell of proident culpa trust fund flannel pickled laborum activated charcoal banh mi sunt mumblecore chartreuse pabst vice. Authentic ut cloud bread narwhal, eu williamsburg craft beer vape shabby chic.
+OMOP Definitions: 
+[](https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE)
+
+All of Us Research Program Notes: 
+[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012797982-Condition-occurrence)
 
 ### MEASUREMENT (LVEF)
 
-Pinterest ut hell of aute anim fingerstache. Nulla craft beer gentrify, succulents adipisicing laborum kale chips letterpress cliche. Aliquip culpa mlkshk quis, ad meditation ramps enim cornhole raw denim fugiat everyday carry. Organic quinoa viral cillum cold-pressed blue bottle. Disrupt cold-pressed squid PBR&B. La croix mollit trust fund, lomo hexagon chia non hoodie. Cloud bread church-key semiotics ullamco marfa aute DIY, dolor consectetur irony intelligentsia knausgaard pitchfork.
+NOTE: ONLY THE LABS CORRESPONDING TO LVEF
+
+OMOP Definitions: 
+[](https://ohdsi.github.io/CommonDataModel/cdm53.html#MEASUREMENT)
+
+All of Us Research Program Notes: 
+[](https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012461201-Measurement)
 
