@@ -12,7 +12,10 @@ where-will-the-ehr-data-be-analyzed
 active-ehr-data-call
 general-description-and-notes
 cohort
+historical-hf-patients-at-cc
+selection-criteria
 icd-10-codes
+hf-patients-prospectively-enrolled-in-the-heartshare-study
 table-or-result-specs
 person
 visit_occurence-and-visit_detail

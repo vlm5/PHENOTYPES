@@ -23,7 +23,7 @@
 <meta name="author" content="HeartShare Data Portal and EHR Integration Working Group" />
 
 
-<meta name="date" content="2022-11-11" />
+<meta name="date" content="2022-11-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -91,7 +91,8 @@
 <li class="chapter" data-level="2.1" data-path="active-ehr-data-call.html"><a href="active-ehr-data-call.html#general-description-and-notes"><i class="fa fa-check"></i><b>2.1</b> General Description and Notes</a></li>
 <li class="chapter" data-level="2.2" data-path="active-ehr-data-call.html"><a href="active-ehr-data-call.html#cohort"><i class="fa fa-check"></i><b>2.2</b> Cohort</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="active-ehr-data-call.html"><a href="active-ehr-data-call.html#icd-10-codes"><i class="fa fa-check"></i><b>2.2.1</b> ICD-10 Codes</a></li>
+<li class="chapter" data-level="2.2.1" data-path="active-ehr-data-call.html"><a href="active-ehr-data-call.html#historical-hf-patients-at-cc"><i class="fa fa-check"></i><b>2.2.1</b> Historical HF Patients at CC</a></li>
+<li class="chapter" data-level="2.2.2" data-path="active-ehr-data-call.html"><a href="active-ehr-data-call.html#hf-patients-prospectively-enrolled-in-the-heartshare-study"><i class="fa fa-check"></i><b>2.2.2</b> HF Patients Prospectively Enrolled in the HeartShare Study</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="active-ehr-data-call.html"><a href="active-ehr-data-call.html#table-or-result-specs"><i class="fa fa-check"></i><b>2.3</b> Table or Result Specs</a>
 <ul>
@@ -138,14 +139,20 @@
 </div>
 <div id="cohort" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Cohort<a href="active-ehr-data-call.html#cohort" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As currently proposed, there will be two HF failure cohorts for inclusion in the OMOP tables. This does not include, yet, their comparator groups as the cohort definition criteria for them is still being developed.</p>
+<div id="historical-hf-patients-at-cc" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Historical HF Patients at CC<a href="active-ehr-data-call.html#historical-hf-patients-at-cc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="selection-criteria" class="section level4 hasAnchor" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> Selection criteria<a href="active-ehr-data-call.html#selection-criteria" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date)</p>
 <ul>
 <li>Age: <span class="math inline">\(\geq\)</span> 18, if used age cut off at 30 as had been previously discussed just indicate that</li>
 <li>Presence of ICD-10 Codes: 2 outpatient encounters or 1 inpatient (for list of codes see below)</li>
 </ul>
 <p>Please don’t use any additional filtering criteria. If you are using any (e.g. BNP cut off value) please indicate that in your response to the DTC.</p>
-<div id="icd-10-codes" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> ICD-10 Codes<a href="active-ehr-data-call.html#icd-10-codes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="icd-10-codes" class="section level4 hasAnchor" number="2.2.1.2">
+<h4><span class="header-section-number">2.2.1.2</span> ICD-10 Codes<a href="active-ehr-data-call.html#icd-10-codes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <pre><code>I09.81,  I11.0,  I13.0,  I13.2,  I50.1,  
 I50.20,  I50.21,  I50.22,  I50.23,  I50.30,  
 I50.31,  I50.32,  I50.33,  I50.40,  I50.41,  
@@ -154,24 +161,45 @@ I50.813,  I50.814,  I50.82,  I50.83,  I50.84,
 I50.89,  I50.9</code></pre>
 </div>
 </div>
+<div id="hf-patients-prospectively-enrolled-in-the-heartshare-study" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> HF Patients Prospectively Enrolled in the HeartShare Study<a href="active-ehr-data-call.html#hf-patients-prospectively-enrolled-in-the-heartshare-study" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Patients in the HF arms of the HeartShare Study, both the HeartShare HF Registry and the HFpEF Deep Phenotyping Cohorts, are also to be included as they enroll in the study and provide informed consent and EHR authorization via the Eureka app.</p>
+</div>
+</div>
 <div id="table-or-result-specs" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Table or Result Specs<a href="active-ehr-data-call.html#table-or-result-specs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We need the following data:</p>
+<p>For the included cohorts this data call shall include the following tables:</p>
 <div id="person" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> PERSON<a href="active-ehr-data-call.html#person" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Umami narwhal master cleanse et brunch lorem. Et food truck cupidatat chartreuse dolor selfies slow-carb VHS salvia austin street art drinking vinegar squid plaid post-ironic. Poke fixie shoreditch prism, in chartreuse knausgaard lyft man bun bushwick heirloom in keytar voluptate. Narwhal YOLO dreamcatcher esse 3 wolf moon fixie. Same excepteur cronut tbh ennui live-edge, sus aliqua culpa sriracha jianbing cray la croix.</p>
+<p>OMOP Definitions:
+<a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON"></a></p>
+<p>All of Us Research Program Notes:
+<a href="https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365502-Person"></a></p>
 </div>
 <div id="visit_occurence-and-visit_detail" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> VISIT_OCCURENCE and VISIT_DETAIL<a href="active-ehr-data-call.html#visit_occurence-and-visit_detail" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Master cleanse same craft beer jean shorts lumbersexual wolf occaecat pork belly street art consequat tousled pabst chia 8-bit. Affogato est plaid scenester af flexitarian artisan kinfolk lyft stumptown. Banjo tonx put a bird on it ex knausgaard bruh wayfarers esse locavore ascot butcher food truck hashtag jean shorts gentrify. Paleo enim man bun banh mi tofu bushwick. Gochujang esse vinyl helvetica chillwave food truck veniam tilde. Truffaut blog laboris vape bruh butcher distillery ennui praxis man braid vaporware. Hashtag snackwave squid sartorial wolf fanny pack.</p>
+<p>VISIT_DETAIL is an optional table used to represents details of each record in the parent VISIT_OCCURRENCE table</p>
+<p>OMOP Definitions:
+<a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_OCCURRENCE"></a>
+<a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_DETAIL"></a></p>
+<p>All of Us Research Program Notes:
+<a href="https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012365522-Visit-occurrence"></a>
+<a href="https://aou-ehr-ops.zendesk.com/hc/en-us/articles/4405827156371-Visit-detail"></a></p>
 </div>
 <div id="condition_occurence" class="section level3 hasAnchor" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> CONDITION_OCCURENCE<a href="active-ehr-data-call.html#condition_occurence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Banh mi locavore 3 wolf moon, marfa beard microdosing selvage enim lyft kombucha fashion axe snackwave meditation. Tousled blue bottle gluten-free deep v. Id hot chicken pitchfork kickstarter. Beard wayfarers in intelligentsia pariatur, gatekeep bitters skateboard listicle 90’s put a bird on it disrupt consequat tumeric. Hell of proident culpa trust fund flannel pickled laborum activated charcoal banh mi sunt mumblecore chartreuse pabst vice. Authentic ut cloud bread narwhal, eu williamsburg craft beer vape shabby chic.</p>
+<p>OMOP Definitions:
+<a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE"></a></p>
+<p>All of Us Research Program Notes:
+<a href="https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012797982-Condition-occurrence"></a></p>
 </div>
 <div id="measurement-lvef" class="section level3 hasAnchor" number="2.3.4">
 <h3><span class="header-section-number">2.3.4</span> MEASUREMENT (LVEF)<a href="active-ehr-data-call.html#measurement-lvef" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Pinterest ut hell of aute anim fingerstache. Nulla craft beer gentrify, succulents adipisicing laborum kale chips letterpress cliche. Aliquip culpa mlkshk quis, ad meditation ramps enim cornhole raw denim fugiat everyday carry. Organic quinoa viral cillum cold-pressed blue bottle. Disrupt cold-pressed squid PBR&amp;B. La croix mollit trust fund, lomo hexagon chia non hoodie. Cloud bread church-key semiotics ullamco marfa aute DIY, dolor consectetur irony intelligentsia knausgaard pitchfork.</p>
+<p>NOTE: ONLY THE LABS CORRESPONDING TO LVEF</p>
+<p>OMOP Definitions:
+<a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#MEASUREMENT"></a></p>
+<p>All of Us Research Program Notes:
+<a href="https://aou-ehr-ops.zendesk.com/hc/en-us/articles/1500012461201-Measurement"></a></p>
 
 </div>
 </div>
