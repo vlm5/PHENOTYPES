@@ -20,4 +20,4 @@ table-or-result-specs
 person
 visit_occurence-and-visit_detail
 condition_occurence
-measurement-lvef
+measurement-lvef-only
