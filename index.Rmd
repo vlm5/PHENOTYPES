@@ -14,4 +14,4 @@ description: "Documentation of EHR data integration specifications"
 
 This document is intended to be the current documentation of specifications pertinent to clinical data integration across the HeartShare study. The most recent version will be available on github at ([github.com/HeartShareStudy/PHENOTYPES](https://github.com/HeartShareStudy/PHENOTYPES)). The best way to pose questions and suggestions about the format of this document, its content, or the process surrounding its maintenance, please start an issue on: ([github.com/HeartShareStudy/PHENOTYPES/issues](https://github.com/HeartShareStudy/PHENOTYPES/issues)). This will start a threaded public conversation in which others can participate and it will also note when the issue is resolved in future updates.
 
-CURRENT VERSION: PRE-RELEASE v0.1.20221121
+CURRENT VERSION: PRE-RELEASE v0.2.20221205
