@@ -78,7 +78,7 @@
 <li class="chapter" data-level="1.3.1" data-path="dpehri.html"><a href="dpehri.html#the-entire-pool-of-hf-patients-with-ehr-records"><i class="fa fa-check"></i><b>1.3.1</b> The Entire Pool of HF Patients with EHR Records</a></li>
 <li class="chapter" data-level="1.3.2" data-path="dpehri.html"><a href="dpehri.html#patients-enrolled-in-heartshare"><i class="fa fa-check"></i><b>1.3.2</b> Patients Enrolled in HeartShare</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="dpehri.html"><a href="dpehri.html#what-ehr-data-are-collected"><i class="fa fa-check"></i><b>1.4</b> What EHR Data Are Collected?</a></li>
+<li class="chapter" data-level="1.4" data-path="dpehri.html"><a href="dpehri.html#what-ehr-data-are-in-scope"><i class="fa fa-check"></i><b>1.4</b> What EHR Data Are in Scope?</a></li>
 <li class="chapter" data-level="1.5" data-path="dpehri.html"><a href="dpehri.html#how-will-ehr-data-be-extracted-and-prepared-for-analysis"><i class="fa fa-check"></i><b>1.5</b> How Will EHR Data Be Extracted and Prepared for Analysis?</a>
 <ul>
 <li class="chapter" data-level="1.5.1" data-path="dpehri.html"><a href="dpehri.html#local-ehr-query-cohort-identification-and-domain-selection."><i class="fa fa-check"></i><b>1.5.1</b> Local EHR Query: Cohort Identification and Domain Selection.</a></li>
@@ -132,14 +132,16 @@
             <section class="normal" id="section-">
 <div id="active-ehr-data-call" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Active EHR Data Call<a href="active-ehr-data-call.html#active-ehr-data-call" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Status: <strong>DRAFT</strong></p>
+<p>Status: <strong>PROPOSED</strong> (receiving comments)</p>
+<p>Target draft approval date: <strong>Monday 2022-12-19</strong></p>
+<p>Target due date: <strong>Wednesday 2022-03-01</strong></p>
 <div id="general-description-and-notes" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> General Description and Notes<a href="active-ehr-data-call.html#general-description-and-notes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This is the first data call requesting the creation of OMOP CDM compatible table at the HeartShare Clinical Centers. It builds upon the <a href="heartshareamp2022.html#heartshareamp2022">initial heart data call</a> presented during the in-person HeartShare AMP meeting on September 29, 2022, and extends it to familiarize the HeartShare CCs with the OMOP CDM data table generation workflow.</p>
+<p>This is the first data call requesting the creation of OMOP CDM compatible table at the HeartShare Clinical Centers. It builds upon the <a href="heartshareamp2022.html#heartshareamp2022">initial heart failure data call</a> presented during the in-person HeartShare AMP meeting on September 29, 2022, and extends it to familiarize the HeartShare CCs with the OMOP CDM data table generation workflow.</p>
 </div>
 <div id="cohort" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Cohort<a href="active-ehr-data-call.html#cohort" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>As currently proposed, there will be two HF failure cohorts for inclusion in the OMOP tables. This does not include, yet, their comparator groups as the cohort definition criteria for them is still being developed.</p>
+<p>As currently proposed, there will be <strong>two cohorts</strong> of HF patients whose records are to be included in the OMOP tables. This does not include, yet, their comparator groups as the cohort definition criteria for them is still being developed.</p>
 <div id="historical-hf-patients-at-cc" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Historical HF Patients at CC<a href="active-ehr-data-call.html#historical-hf-patients-at-cc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="selection-criteria" class="section level4 hasAnchor" number="2.2.1.1">
@@ -168,9 +170,11 @@ I50.89,  I50.9</code></pre>
 </div>
 <div id="table-or-result-specs" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Table or Result Specs<a href="active-ehr-data-call.html#table-or-result-specs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For the included cohorts this data call shall include the following tables:</p>
+<p>For the included cohorts this data call shall include the following tables. All of the table are congruent with <strong>OMOP CDM v.5.3.1</strong>. Unless otherwise specified, we will follow the field requirements (required vs optional) used in the <em>All of Us</em> Research Program. A link to the corresponding table definitions in the OMOP CDM and All of Us online resources is provided in each section.</p>
+<p>If we cannot secure Data Transfer Agreements for transfer of these data, then the default expectation is that the tables will remain within your institutional boundary. They will need to be amenable to standard analysis scripts which will be provided to your site to run against these well-formed tables.</p>
 <div id="person" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> PERSON<a href="active-ehr-data-call.html#person" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This is the master table containing 1 row per patient with basic demographics. It should not contain any personally identifiable information</p>
 <p>OMOP Definitions:</p>
 <p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON">https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON</a></p>
 <p><em>All of Us</em> Research Program Notes:</p>
@@ -178,7 +182,7 @@ I50.89,  I50.9</code></pre>
 </div>
 <div id="visit_occurence-and-visit_detail" class="section level3 hasAnchor" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> VISIT_OCCURENCE and VISIT_DETAIL<a href="active-ehr-data-call.html#visit_occurence-and-visit_detail" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><code>VISIT_DETAIL</code> is an optional table used to represents details of each record in the parent <code>VISIT_OCCURRENCE</code> table</p>
+<p>The <code>VISIT_OCCURENCE</code> table references the encouters listed in the EHR for that patient. The <code>VISIT_DETAIL</code> is an optional table used to represents details of each record in the parent <code>VISIT_OCCURRENCE</code> table</p>
 <p>OMOP Definitions:</p>
 <p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_OCCURRENCE">https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_OCCURRENCE</a></p>
 <p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_DETAIL">https://ohdsi.github.io/CommonDataModel/cdm53.html#VISIT_DETAIL</a></p>
@@ -188,6 +192,7 @@ I50.89,  I50.9</code></pre>
 </div>
 <div id="condition_occurence" class="section level3 hasAnchor" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> CONDITION_OCCURENCE<a href="active-ehr-data-call.html#condition_occurence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This table lists the conditions associated with that patient. Note that it is possible to link those conditions to the encounters during which they were assigned. This link is optional but would be helpful if included. In this data call, we would expect that the ICD-10 selection criteria listed above to be included as the cohorts themselves are defined based on the presence of these codes.</p>
 <p>OMOP Definitions:</p>
 <p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE">https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE</a></p>
 <p><em>All of Us</em> Research Program Notes:</p>
@@ -195,7 +200,126 @@ I50.89,  I50.9</code></pre>
 </div>
 <div id="measurement-lvef-only" class="section level3 hasAnchor" number="2.3.4">
 <h3><span class="header-section-number">2.3.4</span> MEASUREMENT (LVEF ONLY)<a href="active-ehr-data-call.html#measurement-lvef-only" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>NOTE: ONLY THE LABS CORRESPONDING TO LVEF</p>
+<p>The Measurement Domain is the domain in OMOP concerned with examination or testing of a Person or Person’s sample. <strong>For this data call we are only asking to include measurement records pertaining to LV Ejection Fraction</strong>.</p>
+<p><strong>NOTE</strong>: Please note similar to <em>AoU</em>, we are requires standard LOINC concepts for the measurement table. Namely only LVEF measurements that map to the following LOINC codes.</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>LOINC_NUM</th>
+<th>LONG_COMMON_NAME</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10230-1</td>
+<td>Left ventricular Ejection fraction</td>
+</tr>
+<tr class="even">
+<td>8806-2</td>
+<td>Left ventricular Ejection fraction by 2D echo</td>
+</tr>
+<tr class="odd">
+<td>8807-0</td>
+<td>Left ventricular Ejection fraction by 2D echo.visual estimate</td>
+</tr>
+<tr class="even">
+<td>8808-8</td>
+<td>Left ventricular Ejection fraction by Cardiac angiogram</td>
+</tr>
+<tr class="odd">
+<td>8809-6</td>
+<td>Left ventricular Ejection fraction by Cardiac angiogram.visual estimate</td>
+</tr>
+<tr class="even">
+<td>8810-4</td>
+<td>Left ventricular Ejection fraction by Spiral CT</td>
+</tr>
+<tr class="odd">
+<td>8811-2</td>
+<td>Left ventricular Ejection fraction by MR</td>
+</tr>
+<tr class="even">
+<td>8812-0</td>
+<td>Left ventricular Ejection fraction by Nuclear blood pool</td>
+</tr>
+<tr class="odd">
+<td>18043-0</td>
+<td>Left ventricular Ejection fraction by US</td>
+</tr>
+<tr class="even">
+<td>93644-3</td>
+<td>Left ventricular Ejection fraction by US.2D.A2C+Calc by single plane area-length method</td>
+</tr>
+<tr class="odd">
+<td>79992-4</td>
+<td>Left ventricular Ejection fraction by US.2D.A2C+Calculated by single plane method of disks</td>
+</tr>
+<tr class="even">
+<td>93645-0</td>
+<td>Left ventricular Ejection fraction by US.2D.A4C+Calc by single plane area-length method</td>
+</tr>
+<tr class="odd">
+<td>79993-2</td>
+<td>Left ventricular Ejection fraction by US.2D.A4C+Calculated by single plane method of disks</td>
+</tr>
+<tr class="even">
+<td>18046-3</td>
+<td>Left ventricular Ejection fraction by US 2D modified</td>
+</tr>
+<tr class="odd">
+<td>18047-1</td>
+<td>Left ventricular Ejection fraction by US 2D modified biplane</td>
+</tr>
+<tr class="even">
+<td>18048-9</td>
+<td>Left ventricular Ejection fraction by US 2D modified single-plane</td>
+</tr>
+<tr class="odd">
+<td>93646-8</td>
+<td>Left ventricular Ejection fraction by US.2D+Calculated by biplane area-length method</td>
+</tr>
+<tr class="even">
+<td>18045-5</td>
+<td>Left ventricular Ejection fraction by US.2D+Calculated by biplane ellipse method</td>
+</tr>
+<tr class="odd">
+<td>79991-6</td>
+<td>Left ventricular Ejection fraction by US.2D+Calculated by biplane method of disks</td>
+</tr>
+<tr class="even">
+<td>77890-2</td>
+<td>Left ventricular Ejection fraction by US.2D+Calculated by cube method</td>
+</tr>
+<tr class="odd">
+<td>77892-8</td>
+<td>Left ventricular Ejection fraction by US.2D+Calculated by modified Simpson method</td>
+</tr>
+<tr class="even">
+<td>18044-8</td>
+<td>Left ventricular Ejection fraction by US.2D+Calculated by single-plane ellipse method</td>
+</tr>
+<tr class="odd">
+<td>77891-0</td>
+<td>Left ventricular Ejection fraction by US.2D+Calculated by Teichholz method</td>
+</tr>
+<tr class="even">
+<td>79990-8</td>
+<td>Left ventricular Ejection fraction by US.3D.segmentation</td>
+</tr>
+<tr class="odd">
+<td>77889-4</td>
+<td>Left ventricular Ejection fraction by US.M-mode+Calculated by cube method</td>
+</tr>
+<tr class="even">
+<td>18049-7</td>
+<td>Left ventricular Ejection fraction by US.M-mode+Calculated by Teichholz method</td>
+</tr>
+</tbody>
+</table>
 <p>OMOP Definitions:</p>
 <p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#MEASUREMENT">https://ohdsi.github.io/CommonDataModel/cdm53.html#MEASUREMENT</a></p>
 <p><em>All of Us</em> Research Program Notes:</p>

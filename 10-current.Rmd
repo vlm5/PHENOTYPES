@@ -1,14 +1,19 @@
 # Active EHR Data Call 
 
-Status: **DRAFT**
+Status: **PROPOSED** (receiving comments)
+
+Target draft approval date: **Monday 2022-12-19**
+
+Target due date: **Wednesday 2022-03-01**
+
 
 ## General Description and Notes
 
-This is the first data call requesting the creation of OMOP CDM compatible table at the HeartShare Clinical Centers. It builds upon the  [initial heart data call](#heartshareamp2022) presented during the in-person HeartShare AMP meeting on September 29, 2022, and extends it to familiarize the HeartShare CCs with the OMOP CDM data table generation workflow.
+This is the first data call requesting the creation of OMOP CDM compatible table at the HeartShare Clinical Centers. It builds upon the  [initial heart failure data call](#heartshareamp2022) presented during the in-person HeartShare AMP meeting on September 29, 2022, and extends it to familiarize the HeartShare CCs with the OMOP CDM data table generation workflow.
 
 ## Cohort
 
-As currently proposed, there will be two HF failure cohorts for inclusion in the OMOP tables. This does not include, yet, their comparator groups as the cohort definition criteria for them is still being developed.
+As currently proposed, there will be **two cohorts** of HF patients whose records are to be included in the OMOP tables. This does not include, yet, their comparator groups as the cohort definition criteria for them is still being developed.
 
 ### Historical HF Patients at CC
 
@@ -38,9 +43,13 @@ Patients in the HF arms of the HeartShare Study, both the HeartShare HF Registry
 
 ## Table or Result Specs
 
-For the included cohorts this data call shall include the following tables: 
+For the included cohorts this data call shall include the following tables. All of the table are congruent with **OMOP CDM v.5.3.1**. Unless otherwise specified, we will follow the field requirements (required vs optional) used in the *All of Us* Research Program. A link to the corresponding table definitions in the OMOP CDM and All of Us online resources is provided in each section.
+
+If we cannot secure Data Transfer Agreements for transfer of these data, then the default expectation is that the tables will remain within your institutional boundary. They will need to be amenable to standard analysis scripts which will be provided to your site to run against these well-formed tables.
 
 ### PERSON
+
+This is the master table containing 1 row per patient with basic demographics. It should not contain any personally identifiable information 
 
 OMOP Definitions: 
 
@@ -52,7 +61,7 @@ OMOP Definitions:
 
 ### VISIT_OCCURENCE and VISIT_DETAIL
 
-`VISIT_DETAIL` is an optional table used to represents details of each record in the parent `VISIT_OCCURRENCE` table
+The `VISIT_OCCURENCE` table references the encouters listed in the EHR for that patient. The `VISIT_DETAIL` is an optional table used to represents details of each record in the parent `VISIT_OCCURRENCE` table
 
 OMOP Definitions: 
 
@@ -69,6 +78,8 @@ OMOP Definitions:
 
 ### CONDITION_OCCURENCE
 
+This table lists the conditions associated with that patient. Note that it is possible to link those conditions to the encounters during which they were assigned. This link is optional but would be helpful if included. In this data call, we would expect that the ICD-10 selection criteria listed above to be included as the cohorts themselves are defined based on the presence of these codes.
+
 OMOP Definitions: 
 
 [https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE](https://ohdsi.github.io/CommonDataModel/cdm53.html#CONDITION_OCCURRENCE)
@@ -79,7 +90,39 @@ OMOP Definitions:
 
 ### MEASUREMENT (LVEF ONLY)
 
-NOTE: ONLY THE LABS CORRESPONDING TO LVEF
+The Measurement Domain is the domain in OMOP concerned with examination or testing of a Person or Person's sample. **For this data call we are only asking to include measurement records pertaining to LV Ejection Fraction**.
+
+**NOTE**: Please note similar to *AoU*, we are requires standard LOINC concepts for the measurement table. Namely only LVEF measurements that map to the following LOINC codes.
+
+LOINC_NUM|LONG_COMMON_NAME
+---|---
+10230-1|Left ventricular Ejection fraction
+8806-2|Left ventricular Ejection fraction by 2D echo
+8807-0|Left ventricular Ejection fraction by 2D echo.visual estimate
+8808-8|Left ventricular Ejection fraction by Cardiac angiogram
+8809-6|Left ventricular Ejection fraction by Cardiac angiogram.visual estimate
+8810-4|Left ventricular Ejection fraction by Spiral CT
+8811-2|Left ventricular Ejection fraction by MR
+8812-0|Left ventricular Ejection fraction by Nuclear blood pool
+18043-0|Left ventricular Ejection fraction by US
+93644-3|Left ventricular Ejection fraction by US.2D.A2C+Calc by single plane area-length method
+79992-4|Left ventricular Ejection fraction by US.2D.A2C+Calculated by single plane method of disks
+93645-0|Left ventricular Ejection fraction by US.2D.A4C+Calc by single plane area-length method
+79993-2|Left ventricular Ejection fraction by US.2D.A4C+Calculated by single plane method of disks
+18046-3|Left ventricular Ejection fraction by US 2D modified
+18047-1|Left ventricular Ejection fraction by US 2D modified biplane
+18048-9|Left ventricular Ejection fraction by US 2D modified single-plane
+93646-8|Left ventricular Ejection fraction by US.2D+Calculated by biplane area-length method
+18045-5|Left ventricular Ejection fraction by US.2D+Calculated by biplane ellipse method
+79991-6|Left ventricular Ejection fraction by US.2D+Calculated by biplane method of disks
+77890-2|Left ventricular Ejection fraction by US.2D+Calculated by cube method
+77892-8|Left ventricular Ejection fraction by US.2D+Calculated by modified Simpson method
+18044-8|Left ventricular Ejection fraction by US.2D+Calculated by single-plane ellipse method
+77891-0|Left ventricular Ejection fraction by US.2D+Calculated by Teichholz method
+79990-8|Left ventricular Ejection fraction by US.3D.segmentation
+77889-4|Left ventricular Ejection fraction by US.M-mode+Calculated by cube method
+18049-7|Left ventricular Ejection fraction by US.M-mode+Calculated by Teichholz method
+
 
 OMOP Definitions: 
 

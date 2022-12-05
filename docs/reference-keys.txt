@@ -4,7 +4,7 @@ dpehri_aim
 dpehri_whose
 the-entire-pool-of-hf-patients-with-ehr-records
 patients-enrolled-in-heartshare
-what-ehr-data-are-collected
+what-ehr-data-are-in-scope
 how-will-ehr-data-be-extracted-and-prepared-for-analysis
 local-ehr-query-cohort-identification-and-domain-selection.
 extract-transform-load-harmonization-using-the-omop-cdm

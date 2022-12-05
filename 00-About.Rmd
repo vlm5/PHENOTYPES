@@ -30,9 +30,9 @@ This is a broad category and intended to include *all* HF patients and their app
 
 This category is a subset of the category above and includes patients who are enrolled into HeartShare studies via the Eureka platform. These participants provide informed consent and HIPAA authorization for sharing their EHR data, so the regulatory pathway for accrual and sharing of their health information is likely to be more permissive. The accrual of these patients will be ongoing and will include ongoing encounters with the HeartShare CC HF clinics; therefore, this group will likely require regular EHR data aggregation and "topping off" during their active participation in HeartShare studies. This category includes participants in the **HeartShare HF Registry** (previously referred to as the "light touch registry"), the **HeartShare Deep Phenotyping Cohort (DPC)**, and **their comparator groups**.
 
-## What EHR Data Are Collected?
+## What EHR Data Are in Scope?
 
-The data domains that will be included will be prioritized based on their relevance to the HeartShare scientific goals. Informed by the overall aims of HeartShare and the unfolding of the main studies, the DP and EHRI WG will work to define the EHR domains following an incremental approach:
+The data domains that will be included will be prioritized based on their relevance to the HeartShare scientific goals. Informed by the overall aims of HeartShare and the unfolding of the main studies, the DP and EHRI WG will work to define the EHR domains following an incremental approach. The following diagram shows a high level roadmap of the domains we will be seeking, starting with the innermost sets and expanding outwards. Note that there will be domains (red) for which there may not be clear pathway for mapping to the OMOP CDM. In addition to specifying the requirements, the DP and EHRI WG will set guidelines on the procedures for obtaining data from ancillary data sources where they reside. Furthermore, there may be a need to examine the pertinent vocabularies and propose additions where needed. (e.g. by working through the OHDSI community's [CDM Refresh Process](http://ohdsi.github.io/CommonDataModel/cdmRefreshProcess.html).) This will offer an opportunity for the work in HeartShare to inform EHR-based phenotyping in the field in general.
 
 
 ```{r, echo=FALSE}
