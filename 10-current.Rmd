@@ -4,7 +4,7 @@ Status: **PROPOSED** (receiving comments)
 
 Target draft approval date: **Monday 2022-12-19**
 
-Target due date: **Wednesday 2022-03-01**
+Target due date: **Wednesday 2023-03-01**
 
 
 ## General Description and Notes
@@ -19,7 +19,7 @@ As currently proposed, there will be **two cohorts** of HF patients whose record
 
 #### Selection criteria
 
-Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date)
+Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date), namely:
 
 -   Age: $\geq$ 18, if used age cut off at 30 as had been previously discussed just indicate that
 -   Presence of ICD-10 Codes: 2 outpatient encounters or 1 inpatient (for list of codes see below)
@@ -43,13 +43,15 @@ Patients in the HF arms of the HeartShare Study, both the HeartShare HF Registry
 
 ## Table or Result Specs
 
-For the included cohorts this data call shall include the following tables. All of the table are congruent with **OMOP CDM v.5.3.1**. Unless otherwise specified, we will follow the field requirements (required vs optional) used in the *All of Us* Research Program. A link to the corresponding table definitions in the OMOP CDM and All of Us online resources is provided in each section.
+For the included cohorts, this data call shall include the following tables. All of the table are congruent with **OMOP CDM v.5.3.1**. Unless otherwise specified, we will follow the field requirements (required vs optional) used in the *All of Us* Research Program. A link to the corresponding table definitions in the OMOP CDM and All of Us online resources is provided in each section.
 
 If we cannot secure Data Transfer Agreements for transfer of these data, then the default expectation is that the tables will remain within your institutional boundary. They will need to be amenable to standard analysis scripts which will be provided to your site to run against these well-formed tables.
 
 ### PERSON
 
-This is the master table containing 1 row per patient with basic demographics. It should not contain any personally identifiable information 
+This is the master table containing 1 row per patient with basic demographics. It should not contain any personally identifiable information. Use any id numbering scheme that is convenient for you for the `person_id` field. 
+
+**Note**: Since there is no pooling of the data at this point from different sites, we are deferring on providing central guidance on the the following two question at this time. Feel free to implement any approach that works for your center 1) How to to determine whether a given person's record belongs to the `Historical HF Patients at CC` and/or the `HF Patients Prospectively Enrolled in the HeartShare Study` cohort; 2) How will global ids be assigned in pooled datasets to avoid collision between different centers.
 
 OMOP Definitions: 
 

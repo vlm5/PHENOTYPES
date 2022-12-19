@@ -23,7 +23,7 @@
 <meta name="author" content="HeartShare Data Portal and EHR Integration Working Group" />
 
 
-<meta name="date" content="2022-11-21" />
+<meta name="date" content="2022-12-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -134,7 +134,7 @@
 <h1><span class="header-section-number">2</span> Active EHR Data Call<a href="active-ehr-data-call.html#active-ehr-data-call" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Status: <strong>PROPOSED</strong> (receiving comments)</p>
 <p>Target draft approval date: <strong>Monday 2022-12-19</strong></p>
-<p>Target due date: <strong>Wednesday 2022-03-01</strong></p>
+<p>Target due date: <strong>Wednesday 2023-03-01</strong></p>
 <div id="general-description-and-notes" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> General Description and Notes<a href="active-ehr-data-call.html#general-description-and-notes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This is the first data call requesting the creation of OMOP CDM compatible table at the HeartShare Clinical Centers. It builds upon the <a href="heartshareamp2022.html#heartshareamp2022">initial heart failure data call</a> presented during the in-person HeartShare AMP meeting on September 29, 2022, and extends it to familiarize the HeartShare CCs with the OMOP CDM data table generation workflow.</p>
@@ -146,7 +146,7 @@
 <h3><span class="header-section-number">2.2.1</span> Historical HF Patients at CC<a href="active-ehr-data-call.html#historical-hf-patients-at-cc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="selection-criteria" class="section level4 hasAnchor" number="2.2.1.1">
 <h4><span class="header-section-number">2.2.1.1</span> Selection criteria<a href="active-ehr-data-call.html#selection-criteria" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date)</p>
+<p>Selection criteria: follow DTC guidelines to identify HF patients (all EFs) in the EHR 2016 onwards (ICD-10 implementation date), namely:</p>
 <ul>
 <li>Age: <span class="math inline">\(\geq\)</span> 18, if used age cut off at 30 as had been previously discussed just indicate that</li>
 <li>Presence of ICD-10 Codes: 2 outpatient encounters or 1 inpatient (for list of codes see below)</li>
@@ -170,11 +170,12 @@ I50.89,  I50.9</code></pre>
 </div>
 <div id="table-or-result-specs" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Table or Result Specs<a href="active-ehr-data-call.html#table-or-result-specs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>For the included cohorts this data call shall include the following tables. All of the table are congruent with <strong>OMOP CDM v.5.3.1</strong>. Unless otherwise specified, we will follow the field requirements (required vs optional) used in the <em>All of Us</em> Research Program. A link to the corresponding table definitions in the OMOP CDM and All of Us online resources is provided in each section.</p>
+<p>For the included cohorts, this data call shall include the following tables. All of the table are congruent with <strong>OMOP CDM v.5.3.1</strong>. Unless otherwise specified, we will follow the field requirements (required vs optional) used in the <em>All of Us</em> Research Program. A link to the corresponding table definitions in the OMOP CDM and All of Us online resources is provided in each section.</p>
 <p>If we cannot secure Data Transfer Agreements for transfer of these data, then the default expectation is that the tables will remain within your institutional boundary. They will need to be amenable to standard analysis scripts which will be provided to your site to run against these well-formed tables.</p>
 <div id="person" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> PERSON<a href="active-ehr-data-call.html#person" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This is the master table containing 1 row per patient with basic demographics. It should not contain any personally identifiable information</p>
+<p>This is the master table containing 1 row per patient with basic demographics. It should not contain any personally identifiable information. Use any id numbering scheme that is convenient for you for the <code>person_id</code> field.</p>
+<p><strong>Note</strong>: Since there is no pooling of the data at this point from different sites, we are deferring on providing central guidance on the the following two question at this time. Feel free to implement any approach that works for your center 1) How to to determine whether a given person’s record belongs to the <code>Historical HF Patients at CC</code> and/or the <code>HF Patients Prospectively Enrolled in the HeartShare Study</code> cohort; 2) How will global ids be assigned in pooled datasets to avoid collision between different centers.</p>
 <p>OMOP Definitions:</p>
 <p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON">https://ohdsi.github.io/CommonDataModel/cdm53.html#PERSON</a></p>
 <p><em>All of Us</em> Research Program Notes:</p>
