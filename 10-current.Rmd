@@ -1,10 +1,10 @@
 # Active EHR Data Call 
 
-Status: **PROPOSED** (receiving comments)
+Status: **APPROVED**
 
-Target draft approval date: **Monday 2022-12-19**
+Approval date: **Monday 2022-12-19**
 
-Target due date: **Wednesday 2023-03-01**
+Due date: **Wednesday 2023-03-01**
 
 
 ## General Description and Notes
