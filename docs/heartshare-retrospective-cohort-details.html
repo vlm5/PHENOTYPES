@@ -23,7 +23,7 @@
 <meta name="author" content="HeartShare Data Portal and EHR Integration Working Group" />
 
 
-<meta name="date" content="2023-10-12" />
+<meta name="date" content="2023-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -105,7 +105,7 @@
 <li class="chapter" data-level="2.2.4" data-path="heartshare-retrospective-cohort-details.html"><a href="heartshare-retrospective-cohort-details.html#standardized-derived-elements"><i class="fa fa-check"></i><b>2.2.4</b> Standardized Derived Elements</a></li>
 <li class="chapter" data-level="2.2.5" data-path="heartshare-retrospective-cohort-details.html"><a href="heartshare-retrospective-cohort-details.html#vocabulary-tables"><i class="fa fa-check"></i><b>2.2.5</b> Vocabulary Tables</a></li>
 <li class="chapter" data-level="2.2.6" data-path="heartshare-retrospective-cohort-details.html"><a href="heartshare-retrospective-cohort-details.html#vocabularies-to-load"><i class="fa fa-check"></i><b>2.2.6</b> Vocabularies to Load</a></li>
-<li class="chapter" data-level="2.2.7" data-path="heartshare-retrospective-cohort-details.html"><a href="heartshare-retrospective-cohort-details.html#echo-measurement"><i class="fa fa-check"></i><b>2.2.7</b> ECHO Measurement</a></li>
+<li class="chapter" data-level="2.2.7" data-path="heartshare-retrospective-cohort-details.html"><a href="heartshare-retrospective-cohort-details.html#echo-measurement"><i class="fa fa-check"></i><b>2.2.7</b> Echo Measurement</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Previous Data Calls</b></span></li>
@@ -322,19 +322,19 @@ Size of OMOP vocabularies is typically in the range of ~20GB. At a minimum, it i
 <td>12</td>
 <td>Gender</td>
 <td>OMOP Gender</td>
-<td>0-Jan-00</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>13</td>
 <td>Race</td>
 <td>Race and Ethnicity Code Set (USBC)</td>
-<td>0-Jan-00</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>14</td>
 <td>CMS Place of Service</td>
 <td>Place of Service Codes for Professional Claims (CMS)</td>
-<td>0-Jan-00</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>21</td>
@@ -352,19 +352,19 @@ Size of OMOP vocabularies is typically in the range of ~20GB. At a minimum, it i
 <td>40</td>
 <td>DRG</td>
 <td>Diagnosis-related group (CMS)</td>
-<td>0-Jan-00</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>41</td>
 <td>MDC</td>
 <td>Major Diagnostic Categories (CMS)</td>
-<td>0-Jan-00</td>
+<td></td>
 </tr>
 <tr class="even">
 <td>44</td>
 <td>Ethnicity</td>
 <td>OMOP Ethnicity</td>
-<td>0-Jan-00</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>70</td>
@@ -388,7 +388,7 @@ Size of OMOP vocabularies is typically in the range of ~20GB. At a minimum, it i
 <td>115</td>
 <td>Provider</td>
 <td>OMOP Provider</td>
-<td>0-Jan-00</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>128</td>
@@ -400,10 +400,10 @@ Size of OMOP vocabularies is typically in the range of ~20GB. At a minimum, it i
 </table>
 </div>
 <div id="echo-measurement" class="section level3 hasAnchor" number="2.2.7">
-<h3><span class="header-section-number">2.2.7</span> ECHO Measurement<a href="heartshare-retrospective-cohort-details.html#echo-measurement" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Echo measurements should be loaded into MEASUREMENT table. Most of the ECHO variables could be matched to appropriate LOINC code(s). For variables where suitable standard code was not found, custom vocabulary and custom concept mappings were created to be used for capturing those values.</p>
-<p><a href="https://vlm5.github.io/PHENOTYPES/Echo%20Variables%20Mapping.html">ECHO Variables Standard Vocabulary mappings</a></p>
-<p><a href="https://vlm5.github.io/PHENOTYPES/HeartShare%20Vocabulary.html">ECHO Variables Custom Vocabulary mappings</a></p>
+<h3><span class="header-section-number">2.2.7</span> Echo Measurement<a href="heartshare-retrospective-cohort-details.html#echo-measurement" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Echo measurements should be loaded into the MEASUREMENT table. Most of the echo variables could be matched to appropriate LOINC code(s). For variables where suitable standard codes were not found, custom vocabulary and custom concept mappings were created for capturing those values.The echo measurements should be able to be linked to echos in the PROCEDURE_OCCURRENCE table. For left ventricular ejection fraction, we recommend mapping the value in the echo reported by the echocardiographer to the most appropriate LOINC code. If the method of measurement is unknown, then use LOINC Code 8806-2, Left ventricular Ejection fraction by 2D echo.</p>
+<p><a href="https://heartsharestudy.github.io/PHENOTYPES/Echo%20Variables%20Mapping.html">Echo Variables Mappings</a></p>
+<p><a href="https://heartsharestudy.github.io/PHENOTYPES/HeartShare%20Vocabulary.html">Echo Variables Custom Vocabulary</a></p>
 
 </div>
 </div>
